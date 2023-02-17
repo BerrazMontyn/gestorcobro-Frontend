@@ -11,7 +11,7 @@ export default function Landing() {
 						<h1 className="homeTittle">Gestor de cobranzas</h1>
 					</div>
 					<div className="flex justify-center mt-32">
-						<Link to="/home">
+						<Link to="/clientes">
 							<button className="landingButton">Ingresa</button>
 						</Link>
 					</div>

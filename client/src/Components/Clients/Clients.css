@@ -1,0 +1,21 @@
+.addClientButton {
+	font-size: 15px;
+	font-family: Arial;
+	width: 120px;
+	height: 50px;
+	border-width: 1px;
+	color: #fff;
+	border-color: #84bbf3;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	box-shadow: inset 0px 1px 0px 0px #bbdaf7;
+	text-shadow: inset 0px 1px 0px rgba(27, 96, 167, 1);
+	background: rgba(33, 99, 168, 1);
+	margin-left: 20px;
+}
+
+.addClientButton:hover {
+	background: linear-gradient(#378de5, rgba(33, 99, 168, 1));
+}
