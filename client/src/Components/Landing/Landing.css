@@ -1,0 +1,43 @@
+.container {
+	display: flex;
+	justify-content: center;
+}
+
+.homeTittle {
+	font-family: 'Lucida Console', Monaco, monospace;
+	font-size: 90px;
+	letter-spacing: 6px;
+	word-spacing: 0px;
+	color: #000000;
+	font-weight: 600;
+
+	font-style: italic;
+	font-variant: small-caps;
+	text-transform: none;
+	margin-top: 100px;
+}
+
+.landingButton {
+	box-shadow: 3px 10px 23px 1px #1564ad;
+	background: linear-gradient(to bottom, #2263a5 5%, #378de5 100%);
+	background-color: #79bbff;
+	border-radius: 13px;
+	border: 2px solid #337bc4;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Verdana;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 18px 69px;
+	text-decoration: none;
+	/* text-shadow: 1px 1px 0px #528ecc; */
+}
+.landingButton:hover {
+	background: linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	background-color: #378de5;
+}
+.landingButton:active {
+	position: relative;
+	top: 1px;
+}
