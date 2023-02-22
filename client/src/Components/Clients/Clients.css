@@ -14,6 +14,7 @@
 	text-shadow: inset 0px 1px 0px rgba(27, 96, 167, 1);
 	background: rgba(33, 99, 168, 1);
 	margin-left: 20px;
+	margin-bottom: 10px;
 }
 
 .addClientButton:hover {
