@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ClientsTable from '../ClientsTable/ClientsTable';
 import SideMenu from '../SideMenu/SideMenu';
+
 import './Clients.css';
 
 export default function Clientes() {
@@ -16,7 +18,9 @@ export default function Clientes() {
 				<div className="flex mb-5">
 					<hr className="border-1 border-zinc-400 w-[75vw]" />
 				</div>
-				<button className="addClientButton">Agregar cliente</button>
+				<Link to="/nuevo-cliente">
+					<button className="addClientButton">Agregar cliente</button>
+				</Link>
 				<ClientsTable />
 			</div>
 		</div>

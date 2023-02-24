@@ -1,7 +1,7 @@
-import { GET_CUSTOMERS } from './action';
+import { GET_CUSTOMERS, CREATE_CUSTOMER } from './action';
 
 let initialState = {
-	customers: {}
+	customers: []
 };
 
 function rootReducer(state = initialState, action) {
@@ -9,7 +9,11 @@ function rootReducer(state = initialState, action) {
 		case GET_CUSTOMERS:
 			return {
 				...state,
-				customers: action.payload,
+				customers: action.payload
+			};
+		case CREATE_CUSTOMER:
+			return {
+				...state
 			};
 
 		default:
