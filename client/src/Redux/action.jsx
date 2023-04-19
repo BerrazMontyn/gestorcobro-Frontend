@@ -3,10 +3,12 @@ export const GET_CUSTOMERS = 'GET_CUSTOMERS';
 export const CREATE_CUSTOMER = 'CREATE_CUSTOMER';
 export const GET_CATEGORIES = 'GET_CATEGORIES';
 
-export function getCustomers() {
+export function getCustomers(property, order) {
 	return async (dispatch) => {
 		try {
-			const json = await axios.get('/customers');
+			const json = await axios.get(
+				`/customers?property=${property}&order=${order}`
+			);
 
 			return dispatch({
 				type: GET_CUSTOMERS,

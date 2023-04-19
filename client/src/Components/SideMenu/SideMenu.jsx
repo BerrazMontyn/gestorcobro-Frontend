@@ -1,6 +1,7 @@
 import React from 'react';
 import './SideMenu.css';
 import { BsPersonFill } from 'react-icons/bs';
+import { FaListUl } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import caja from './caja test.jpg';
 
@@ -42,7 +43,7 @@ export default function SideMenu() {
 					<Link to="/categorias">
 						<li className="text-xl flex ">
 							{' '}
-							<BsPersonFill className="text-3xl" />
+							<FaListUl className="text-3xl" />
 							<h2 className="pl-4">Categorias</h2>
 						</li>
 					</Link>

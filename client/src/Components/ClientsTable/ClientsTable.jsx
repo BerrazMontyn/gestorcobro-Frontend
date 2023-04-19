@@ -1,12 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getCustomers } from '../../Redux/action';
 import './ClientsTable.css';
 import { useSelector, useDispatch } from 'react-redux';
+import { FiEdit } from 'react-icons/fi';
+import { CgMoreR } from 'react-icons/cg';
+import { RiDeleteBinLine } from 'react-icons/ri';
 
 export default function ClientsTable() {
 	const dispatch = useDispatch();
+	const [property, setProperty] = useState('id');
+	const [order, setOrder] = useState('ASC');
 	useEffect(() => {
-		dispatch(getCustomers());
+		dispatch(getCustomers(property, order));
 	}, [dispatch]);
 	const customers = useSelector((state) => state.customers);
 	console.log(customers, 'clientesssss');
@@ -37,9 +42,15 @@ export default function ClientsTable() {
 										<div>Dir: {c.address}</div>
 									</td>
 									<td>
-										<button>Editar</button>
-										<button>Detalles</button>
-										<button>Eliminar</button>
+										<button>
+											<FiEdit className="text-2xl mr-2" />
+										</button>
+										<button>
+											<CgMoreR className="text-2xl mr-2" />
+										</button>
+										<button>
+											<RiDeleteBinLine className="text-2xl mr-2" />
+										</button>
 									</td>
 								</tr>
 							);
