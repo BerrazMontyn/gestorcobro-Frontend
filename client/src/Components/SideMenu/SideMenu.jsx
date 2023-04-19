@@ -39,11 +39,21 @@ export default function SideMenu() {
 				</div>
 
 				<div>
-					<Link to="/categorias">
+					<Link to="/services">
 						<li className="text-xl flex ">
 							{' '}
 							<BsPersonFill className="text-3xl" />
-							<h2 className="pl-4">Categorias</h2>
+							<h2 className="pl-4">Servicios</h2>
+						</li>
+					</Link>
+				</div>
+
+				<div>
+					<Link to="/entradas">
+						<li className="text-xl flex ">
+							{' '}
+							<BsPersonFill className="text-3xl" />
+							<h2 className="pl-4">Gastos</h2>
 						</li>
 					</Link>
 				</div>

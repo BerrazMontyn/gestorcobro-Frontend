@@ -1,10 +1,12 @@
 import React from "react"
-import CategoriesTable from './CategoriesTable/CategoriesTable'
+import { Link } from "react-router-dom";
+import ServicesTable from "./ServicesTable/ServicesTable";
 import SideMenu from "../SideMenu/SideMenu";
-import './Categories.css'
+import './Services.css'
 
 
-export default function Categories () {
+
+export default function Services () {
     return (
         <div className="flex max-w-screen bg-slate-200">
 			<div>
@@ -12,13 +14,16 @@ export default function Categories () {
 			</div>
 			<div>
 				<div className="flex flex-col justify-center mt-8 ml-20 text-gray-700">
-					<h1 className="text-3xl underline mb-4">Categorias</h1>
+					<h1 className="text-3xl underline mb-4">Servicios</h1>
 				</div>
 				<div className="flex mb-5">
 					<hr className="border-1 border-zinc-400 w-[75vw]" />
 				</div>
-				<button className="addClientButton">Agregar categoria</button>
-				<CategoriesTable />
+				<Link to="/nuev0-servicio">
+				<button className="addClientButton">Agregar servicio</button>
+				</Link>
+				
+				<ServicesTable />
 			</div>
 		</div>
     )

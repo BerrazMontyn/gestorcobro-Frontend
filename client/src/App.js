@@ -2,7 +2,8 @@ import "./App.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Landing from "./Components/Landing/Landing.jsx";
 import Clients from "./Components/Clients/Clients.jsx";
-import Categories from "./Components/Categories/Categories";
+import Services from "./Components/Servicios/Services";
+import AddService from "./Components/Servicios/AddServices/AddService";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route exact path="/clientes" component={Clients} />
-          <Route exact path="/categorias" component={Categories} />
+          <Route exact path="/services" component={Services} />
+          <Route exact path="/nuevo-servicio" component={AddService} />
         </Switch>
       </div>
     </BrowserRouter>

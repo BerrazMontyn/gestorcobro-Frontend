@@ -1,6 +1,8 @@
 import axios from "axios";
 export const GET_CUSTOMERS = "GET_CUSTOMERS";
-export const GET_CATEGORIES = "GET_CATEGORIES";
+export const GET_SERVICES = "GET_SERVICES";
+export const CREATE_SERVICES = "CREATE_SERVICES"
+
 
 
 export function getCustomers() {
@@ -20,19 +22,40 @@ export function getCustomers() {
     }
 }
 
-export function getCategories () {
+export function getServices() {
     return async(dispatch) =>{
         try {
-            const json = await axios.get("/categories")
+            const json = await axios.get("/services")
+            
             return dispatch({
-                type: GET_CATEGORIES,
+                type: GET_SERVICES,
                 payload: json.data
 
             })
             
         } catch (error) {
-            console.log("Rompo en GETCATEGORIES", error)
+            console.log("Rompo en GETSERVICES", error)
+            
         }
     }
 }
+
+export function createService(payload) {
+    return async(dispatch) =>{
+        try {
+            const jsonPost = await axios.post('/services', payload);
+            console.log(jsonPost)
+            return dispatch({
+                type: CREATE_SERVICES,
+                payload: jsonPost.data
+            })
+            
+        } catch (error) {
+            console.log('Rompo en POSTCATEGORIES', error)
+        }
+    }
+}
+
+
+
 
